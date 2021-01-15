@@ -1,0 +1,17 @@
+query getPostList($input: PostSearchType) {
+  posts(input: $input, paging: { limit: 12 }) {
+    items {
+      id
+      type
+      locale
+      shortDescription
+      fullUrl
+      thumbnail
+      tags
+      title
+      publishedAt
+      __typename
+    }
+    __typename
+  }
+}
